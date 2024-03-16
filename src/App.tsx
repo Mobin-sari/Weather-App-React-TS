@@ -1,12 +1,15 @@
 import Home from "./components/Home";
+import InputConext from "./context/InputConext";
 import WeatherContext from "./context/WeatherContext";
 
 function App() {
   return (
     <>
-      <WeatherContext>
-        <Home />
-      </WeatherContext>
+      <InputConext>
+        <WeatherContext>
+          <Home />
+        </WeatherContext>
+      </InputConext>
     </>
   );
 }

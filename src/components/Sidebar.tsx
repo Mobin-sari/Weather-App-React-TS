@@ -1,8 +1,15 @@
+import ChanceOfRain from "../pages/ChanceOfRain";
+import InformationSun from "../pages/InformationSun";
+import Location from "../pages/Location";
+import Temp from "../pages/Temp";
 
 function Sidebar() {
     return (
         <div>
-            sidebar
+            <Location />
+            <Temp />
+            <ChanceOfRain />
+            <InformationSun />
         </div>
     );
 }

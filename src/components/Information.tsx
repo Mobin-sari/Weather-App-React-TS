@@ -1,9 +1,10 @@
+import InputSearch from "../pages/InputSearch";
 
 function Information() {
     return (
-        <div>
-            informatin
-        </div>
+        <>
+        <InputSearch />
+        </>
     );
 }
 

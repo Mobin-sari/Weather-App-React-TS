@@ -1,12 +1,14 @@
 import { createContext, useContext } from "react";
 import DataUseCurrent from "../data/DataUseCurrent";
+import DataUseForecast from "../data/DataUseForecast";
 
 export const weatherContextData = createContext({});
 
 function WeatherContext({ children }: JSX.ElementChildrenAttribute) {
   const useCurrent = DataUseCurrent();
+  const useForecast = DataUseForecast();
   return (
-    <weatherContextData.Provider value={useCurrent}>
+    <weatherContextData.Provider value={{useCurrent, useForecast}}>
       {children}
     </weatherContextData.Provider>
   );

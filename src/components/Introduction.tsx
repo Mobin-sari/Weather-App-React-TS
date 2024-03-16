@@ -1,8 +1,13 @@
+import Humidity from "../pages/Humidity";
+import LastUpdate from "../pages/LastUpdate";
+import UvIndex from "../pages/UvIndex";
 
 function Introduction() {
     return (
         <div>
-            introduction
+            <Humidity />
+            <UvIndex />
+            <LastUpdate />
         </div>
     );
 }
