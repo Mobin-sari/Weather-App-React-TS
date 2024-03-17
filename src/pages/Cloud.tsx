@@ -1,14 +1,15 @@
 import DataUseCurrent from "../data/DataUseCurrent";
 
-function Humidity() {
+function Cloud() {
   const data = DataUseCurrent();
+
   return (
     <div>
-      <p >
-        Humidity: <span>{data?.current.humidity}</span>
+      <p>
+        Cloud: <span>{data?.current.cloud}</span>
       </p>
     </div>
   );
 }
 
-export default Humidity;
+export default Cloud;

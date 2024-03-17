@@ -25,7 +25,6 @@ function DataUseForecast() {
     };
     fetchCurrent();
   }, [search]);
-
   return dataForecast;
 }
 
