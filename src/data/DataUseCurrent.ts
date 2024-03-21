@@ -10,8 +10,8 @@ type Data = {
 
 function DataUseCurrent() {
   const [dataCurrent, setDataCurrent] = useState<Data>();
-
   const { search, handleInputChange } = useInput();
+
 
   useEffect(() => {
     const fetchCurrent = async () => {
@@ -24,7 +24,7 @@ function DataUseCurrent() {
     };
     fetchCurrent();
   }, [search]);
-
+  
   return dataCurrent;
 }
 

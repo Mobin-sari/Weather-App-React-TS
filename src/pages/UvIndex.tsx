@@ -1,12 +1,73 @@
+import { PieChart, Pie, Cell } from "recharts";
 import DataUseCurrent from "../data/DataUseCurrent";
 
 function UvIndex() {
-  const data = DataUseCurrent();
+  const dataUV = DataUseCurrent();
+  const RADIAN = Math.PI / 180;
+  const data = [
+    { name: "A", value: 8, color: "#00ff00" },
+    { name: "B", value: 4.5, color: "#0000ff" },
+    { name: "C", value: 2.5, color: "#ff0000" },
+  ];
+  const cx = 100;
+  const cy = 150;
+  const iR = 30;
+  const oR = 70;
+  const value = dataUV?.current.uv;
 
+  const needle = (value, data, cx, cy, iR, oR, color) => {
+    let total = 0;
+    data.forEach((v) => {
+      total += v.value;
+    });
+    const ang = 180.0 * (1 - value / total);
+    const length = (iR + 2 * oR) / 3;
+    const sin = Math.sin(-RADIAN * ang);
+    const cos = Math.cos(-RADIAN * ang);
+    const r = 5;
+    const x0 = cx + 5;
+    const y0 = cy + 5;
+    const xba = x0 + r * sin;
+    const yba = y0 - r * cos;
+    const xbb = x0 - r * sin;
+    const ybb = y0 + r * cos;
+    const xp = x0 + length * cos;
+    const yp = y0 + length * sin;
+
+    return [
+      <circle cx={x0} cy={y0} r={r} fill={color} stroke="none" />,
+      <path
+        d={`M${xba} ${yba}L${xbb} ${ybb} L${xp} ${yp} L${xba} ${yba}`}
+        stroke="#none"
+        fill={color}
+      />,
+    ];
+  };
   return (
-    <div>
-      <p>UV index: {data?.current.uv}</p>
-    </div>
+    <>
+      <div className="w-full">
+        <PieChart width={180} height={170}>
+          <Pie
+            dataKey="value"
+            startAngle={180}
+            endAngle={0}
+            data={data}
+            cx={cx}
+            cy={cy}
+            innerRadius={iR}
+            outerRadius={oR}
+            fill="#8884d8"
+            stroke="none"
+          >
+            {data.map((entry, index) => (
+              <Cell key={index} fill={entry.color} />
+            ))}
+          </Pie>
+          {needle(value, data, cx, cy, iR, oR, "#d0d000")}
+        </PieChart>
+        <p>UV Index</p>
+      </div>
+    </>
   );
 }
 

@@ -10,10 +10,4 @@ const fetchDataForecast = (city) => {
   return BASE_URL_FORECAST;
 };
 
-const fetchDataForecastChart = (city) => {
-    const KEY = "1e2f8ec64366e0e915a1a03af4ceb131"
-    const BASE_URL_CHART = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${KEY}`
-    return BASE_URL_CHART
-};
-
-export { fetchDataCurrent, fetchDataForecast, fetchDataForecastChart };
+export { fetchDataCurrent, fetchDataForecast };

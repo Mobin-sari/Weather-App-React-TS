@@ -2,18 +2,26 @@ import Information from "./Information";
 import Introduction from "./Introduction";
 import Sidebar from "./Sidebar";
 
+import { Wrapper, WrapperSecond } from "../styles/styled";
+
 function Home() {
   return (
     <div className="flex flex-row h-screen">
-      <div className="basis-1/6">
-        <Introduction />
-      </div>
-      <div className="basis-1/2 bg-indigo-50">
-        <Information />
-      </div>
-      <div className="basis-1/3">
-        <Sidebar />
-      </div>
+      <WrapperSecond>
+        <div className="">
+          <Introduction />
+        </div>
+      </WrapperSecond>
+      <Wrapper>
+        <div className="">
+          <Information />
+        </div>
+      </Wrapper>
+      <WrapperSecond>
+        <div className="">
+          <Sidebar />
+        </div>
+      </WrapperSecond>
     </div>
   );
 }

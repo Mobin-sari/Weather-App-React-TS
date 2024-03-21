@@ -1,20 +1,21 @@
 import DataUseCurrent from "../data/DataUseCurrent";
+import useDate from "../helper/useDate";
 
 function Location() {
   const data = DataUseCurrent();
+  const date = useDate();
 
   return (
-    <div>
-      <div>
-        <p>
-          location: <span>{data?.location.country}</span>
-        </p>
+    <div className="grid grid-rows-1 grid-flow-col gap-4">
+      <div className="flex flex-col mt-3 ml-8">
+        <div>
+          <span>{data?.location.tz_id}</span>
+        </div>
+        <div>
+          <span className="text-slate-400">{data?.location.country}</span>
+        </div>
       </div>
-      <div>
-        <p>
-          location: <span>{data?.location.tz_id}</span>
-        </p>
-      </div>
+      <div className="mt-7">{date.time}</div>
     </div>
   );
 }

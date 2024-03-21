@@ -1,0 +1,26 @@
+.container {
+  display: flex;
+  margin-left: 30px;
+}
+
+.container div:first-child div {
+  margin-top: 20px;
+}
+
+.container div:last-child div:first-child {
+  margin-left: 38px;
+}
+
+.container div:last-child div:last-child {
+  margin-left: 38px;
+}
+
+.border {
+  width: 80%;
+  border-style: solid;
+  border-width: 0.05rem;
+  margin-top: 25px;
+  margin-bottom: 20px;
+  border-radius: 20px;
+  border-color: rgb(135, 134, 134);
+}
