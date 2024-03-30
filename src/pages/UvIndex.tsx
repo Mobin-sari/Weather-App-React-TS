@@ -5,14 +5,14 @@ function UvIndex() {
   const dataUV = DataUseCurrent();
   const RADIAN = Math.PI / 180;
   const data = [
-    { name: "A", value: 8, color: "#00ff00" },
-    { name: "B", value: 4.5, color: "#0000ff" },
-    { name: "C", value: 2.5, color: "#ff0000" },
+    { name: "A", value: 6, color: "#20FC8F" },
+    { name: "B", value: 5, color: "#1C7293" },
+    { name: "C", value: 2, color: "#B20D30" },
   ];
-  const cx = 100;
-  const cy = 150;
-  const iR = 30;
-  const oR = 70;
+  const cx = 99;
+  const cy = 70;
+  const iR = 35;
+  const oR = 65;
   const value = dataUV?.current.uv;
 
   const needle = (value, data, cx, cy, iR, oR, color) => {
@@ -45,7 +45,7 @@ function UvIndex() {
   };
   return (
     <>
-      <div className="w-full">
+      <div>
         <PieChart width={180} height={170}>
           <Pie
             dataKey="value"
@@ -65,7 +65,6 @@ function UvIndex() {
           </Pie>
           {needle(value, data, cx, cy, iR, oR, "#d0d000")}
         </PieChart>
-        <p>UV Index</p>
       </div>
     </>
   );

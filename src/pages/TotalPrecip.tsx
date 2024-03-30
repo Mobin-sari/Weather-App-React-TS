@@ -16,7 +16,7 @@ function TotalPrecip() {
         <div>
           <p className="text-slate-500">Total precip</p>
           <span className="text-2xl font-semibold">
-            {data?.forecast.forecastday[0].day.totalprecip_mm}
+            {data?.forecast.forecastday[0].day.totalprecip_mm} Mm
           </span>
         </div>
       </div>
