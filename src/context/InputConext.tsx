@@ -10,7 +10,7 @@ const inputContextData = createContext<InputValueContextType | undefined>(
 );
 
 function InputConext({ children }: JSX.ElementChildrenAttribute) {
-  const [search, setSearch] = useState<string>("tehran");
+  const [search, setSearch] = useState<string>("berlin");
 
   const handleInputChange = (e: ChangeEvent<HTMLInputElement>) => {
     setSearch(e.target.value);

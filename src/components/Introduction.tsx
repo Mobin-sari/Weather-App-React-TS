@@ -1,20 +1,10 @@
-import DataUseCurrent from "../data/DataUseCurrent";
-import UvIndex from "../pages/UvIndex";
+import ForecastData from "../pages/ForecastData";
 
 function Introduction() {
-  const dataUV = DataUseCurrent();
-
   return (
     <div>
       <div>
-        
-      </div>
-      <div className="w-52 h-32 ml-7 mt-10 mb-24 rounded-lg shadow-lg bg-slate-100">
-        <p className="text-slate-500 ml-3 mt-3">
-          UV Index:
-          <span className="text-xl font-semibold"> {dataUV?.current.uv}</span>
-        </p>
-        <UvIndex />
+        <ForecastData />
       </div>
     </div>
   );

@@ -9,8 +9,8 @@ function UvIndex() {
     { name: "B", value: 5, color: "#1C7293" },
     { name: "C", value: 2, color: "#B20D30" },
   ];
-  const cx = 99;
-  const cy = 70;
+  const cx = 110;
+  const cy = 60;
   const iR = 35;
   const oR = 65;
   const value = dataUV?.current.uv;

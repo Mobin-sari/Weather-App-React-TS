@@ -2,23 +2,23 @@ import Information from "./Information";
 import Introduction from "./Introduction";
 import Sidebar from "./Sidebar";
 
-import { Wrapper, WrapperSecond } from "../styles/styled";
+import { Wrapper, WrapperIntroduction, WrapperSecond } from "../styles/styled";
 
 function Home() {
   return (
     <div className="flex flex-row h-screen">
-      <WrapperSecond>
-        <div className="">
+      <WrapperIntroduction>
+        <div>
           <Introduction />
         </div>
-      </WrapperSecond>
+      </WrapperIntroduction>
       <Wrapper>
-        <div className="">
+        <div>
           <Information />
         </div>
       </Wrapper>
       <WrapperSecond>
-        <div className="">
+        <div>
           <Sidebar />
         </div>
       </WrapperSecond>

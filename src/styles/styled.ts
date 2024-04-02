@@ -46,12 +46,17 @@ export const Percent = styled.section<{ $data?: number | undefined }>`
 export const Wrapper = styled.section`
   background-color: rgba(246, 246, 248, 255);
   height: 100%;
-  width: 60%;
+  width: 65%;
 `;
 
 export const WrapperSecond = styled.section`
   height: 100%;
   width: 20%;
+`;
+
+export const WrapperIntroduction = styled.section`
+  height: 100%;
+  width: 15%;
 `;
 
 export const ProgressStyled = styled.section`
