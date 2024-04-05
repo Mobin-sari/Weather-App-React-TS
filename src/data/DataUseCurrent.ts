@@ -12,19 +12,24 @@ function DataUseCurrent() {
   const [dataCurrent, setDataCurrent] = useState<Data>();
   const { search, handleInputChange } = useInput();
 
-
   useEffect(() => {
+    const controller = new AbortController();
     const fetchCurrent = async () => {
       try {
-        const response = await axios.get<Data>(fetchDataCurrent(search));
+        const response = await axios.get<Data>(fetchDataCurrent(search), {
+          signal: controller.signal,
+        });
         setDataCurrent(response.data);
       } catch {
         console.log("error in current axios");
       }
+      return () => {
+        controller.abort();
+      };
     };
     fetchCurrent();
   }, [search]);
-  
+
   return dataCurrent;
 }
 

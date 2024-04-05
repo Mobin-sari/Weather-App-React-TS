@@ -16,28 +16,28 @@ function ChanceOfRain() {
         <span className="ml-8 mr-4">0:00</span>
         <div className="flex flex-row mb-1">
           <Progress data={rainNumber0} />
-          <span className="ml-2">{rainNumber0}%</span>
+          <span className="ml-2 text-xs font-bold mt-1">{rainNumber0}%</span>
         </div>
       </div>
       <div className="flex mb-2">
         <span className="ml-8 mr-4">7:00</span>
         <div className="flex flex-row">
           <Progress data={rainNumber6} />
-          <span className="ml-2">{rainNumber6}%</span>
+          <span className="ml-2 text-xs font-bold mt-1">{rainNumber6}%</span>
         </div>
       </div>
       <div className="flex mb-2">
         <span className="ml-8 mr-2">15:00</span>
         <div className="flex flex-row">
           <Progress data={rainNumber18} />
-          <span className="ml-2">{rainNumber18}%</span>
+          <span className="ml-2 text-xs font-bold mt-1">{rainNumber18}%</span>
         </div>
       </div>
       <div className="flex mb-2">
         <span className="ml-8 mr-2">20:00</span>
         <div className="flex flex-row">
           <Progress data={rainNumber23} />
-          <span className="ml-2">{rainNumber23}%</span>
+          <span className="ml-2 text-xs font-bold mt-1">{rainNumber23}%</span>
         </div>
       </div>
     </div>

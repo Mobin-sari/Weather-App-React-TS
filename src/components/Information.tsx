@@ -15,9 +15,7 @@ function Information() {
         <InputSearch />
       </div>
       <div className="mt-40 ml-5 mr-7">
-        <h1 className="font-black text-xl font-mono ml-3">
-          Today's Highlights
-        </h1>
+        <h1 className="font-black text-2xl ml-3">Today's Highlights</h1>
         <div className="mt-5 grid grid-cols-3 gap-10">
           <div className="w-60 h-28 rounded-lg shadow-lg bg-white">
             <WindSpees />

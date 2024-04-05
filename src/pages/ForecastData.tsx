@@ -8,9 +8,9 @@ function ForecastData() {
   return (
     <div>
       {forecastData?.forecast.forecastday.map((f) => (
-        <div className="flex flex-col items-center bg-slate-200 mt-14 ml-14 mb-12 w-24 rounded drop-shadow-lg shadow-lg">
+        <div className="flex flex-col items-center bg-slate-200 mt-14 ml-12 mb-12 w-28 rounded-md drop-shadow-lg shadow-lg">
           <div>
-            <p className="text-xl text-cyan-700">
+            <p className="text-xl mt-2 text-cyan-700">
               {moment(f.date).format("ddd")}
             </p>
           </div>

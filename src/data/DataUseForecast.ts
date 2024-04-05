@@ -15,13 +15,20 @@ function DataUseForecast() {
   const { search, handleInputChange } = useInput();
 
   useEffect(() => {
+    const controller = new AbortController();
     const fetchCurrent = async () => {
       try {
-        const response = await axios.get<DataWeather>(fetchDataForecast(search));
+        const response = await axios.get<DataWeather>(
+          fetchDataForecast(search),
+          { signal: controller.signal }
+        );
         setDataForecast(response.data);
       } catch {
         console.log("error in forecast axios");
       }
+      return () => {
+        controller.abort();
+      };
     };
     fetchCurrent();
   }, [search]);

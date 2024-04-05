@@ -1,6 +1,10 @@
 import styled from "styled-components";
 import { persentData } from "../helper/functionsHelper";
 
+export const WrapperFont = styled.section`
+  font-family: Lato;
+`
+
 export const WrapperSearch = styled.section`
   width: 90px;
   padding: 10px 10px 10px 20px;
