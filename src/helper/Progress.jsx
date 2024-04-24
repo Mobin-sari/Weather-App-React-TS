@@ -1,6 +1,6 @@
 import { Percent, ProgressStyled } from "../styles/styled";
 
-function Progress({ data }: number) {
+function Progress({ data }) {
   return (
     <>
       <ProgressStyled>
