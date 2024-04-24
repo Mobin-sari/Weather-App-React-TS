@@ -2,7 +2,7 @@ import { useInput } from "../context/InputConext";
 import { WrapperSearch } from "../styles/styled";
 
 function InputSearch() {
-  const { search, handleInputChange }: any | undefined = useInput();
+  const { search, handleInputChange } = useInput();
 
   return (
     <div className="mt-7 ml-64 w-full flex">

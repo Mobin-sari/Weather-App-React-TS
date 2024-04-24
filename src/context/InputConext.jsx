@@ -3,9 +3,9 @@ import { ChangeEvent, createContext, useContext, useState } from "react";
 const inputContextData = createContext(undefined);
 
 function InputConext({ children }) {
-  const [search, setSearch] = useState<string>("berlin");
+  const [search, setSearch] = useState("berlin");
 
-  const handleInputChange = (e: ChangeEvent<HTMLInputElement>) => {
+  const handleInputChange = (e) => {
     setSearch(e.target.value);
   };
 
