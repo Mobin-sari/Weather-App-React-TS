@@ -3,14 +3,8 @@ import { useEffect, useState } from "react";
 import { fetchDataForecast } from "./data";
 import { useInput } from "../context/InputConext";
 
-export type DataWeather = {
-  current: object;
-  location: object;
-  forecast: object;
-};
-
 function DataUseForecast() {
-  const [dataForecast, setDataForecast] = useState<DataWeather>();
+  const [dataForecast, setDataForecast] = useState();
 
   const { search, handleInputChange } = useInput();
 
@@ -18,7 +12,7 @@ function DataUseForecast() {
     const controller = new AbortController();
     const fetchCurrent = async () => {
       try {
-        const response = await axios.get<DataWeather>(
+        const response = await axios.get(
           fetchDataForecast(search),
           { signal: controller.signal }
         );

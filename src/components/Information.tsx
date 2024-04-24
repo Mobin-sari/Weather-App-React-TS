@@ -33,7 +33,7 @@ function Information() {
             <p className="text-slate-500 ml-3 ">
               UV index:{" "}
               <span className="text-2xl text-cyan-600 font-semibold">
-                {UVData?.current.uv}
+                {UVData?.current?.uv}
               </span>
             </p>
             <UvIndex />

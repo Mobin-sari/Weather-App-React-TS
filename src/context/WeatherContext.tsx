@@ -4,7 +4,7 @@ import DataUseForecast from "../data/DataUseForecast";
 
 export const weatherContextData = createContext({});
 
-function WeatherContext({ children }: JSX.ElementChildrenAttribute) {
+function WeatherContext({ children }) {
   const useCurrent = DataUseCurrent();
   const useForecast = DataUseForecast();
   return (

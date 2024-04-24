@@ -1,15 +1,8 @@
 import { ChangeEvent, createContext, useContext, useState } from "react";
 
-interface InputValueContextType {
-  inputValue: string;
-  onInputChange: (event: ChangeEvent<HTMLInputElement>) => void;
-}
+const inputContextData = createContext(undefined);
 
-const inputContextData = createContext<InputValueContextType | undefined>(
-  undefined
-);
-
-function InputConext({ children }: JSX.ElementChildrenAttribute) {
+function InputConext({ children }) {
   const [search, setSearch] = useState<string>("berlin");
 
   const handleInputChange = (e: ChangeEvent<HTMLInputElement>) => {

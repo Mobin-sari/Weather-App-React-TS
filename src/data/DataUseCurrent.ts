@@ -3,20 +3,16 @@ import { useEffect, useState } from "react";
 import { fetchDataCurrent } from "./data";
 import { useInput } from "../context/InputConext";
 
-type Data = {
-  current: object;
-  location: object;
-};
 
 function DataUseCurrent() {
-  const [dataCurrent, setDataCurrent] = useState<Data>();
+  const [dataCurrent, setDataCurrent] = useState();
   const { search, handleInputChange } = useInput();
 
   useEffect(() => {
     const controller = new AbortController();
     const fetchCurrent = async () => {
       try {
-        const response = await axios.get<Data>(fetchDataCurrent(search), {
+        const response = await axios.get(fetchDataCurrent(search), {
           signal: controller.signal,
         });
         setDataCurrent(response.data);
